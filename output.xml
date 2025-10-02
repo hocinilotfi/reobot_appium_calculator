@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on linux)" generated="2025-10-02T11:52:28.001751" rpa="false" schemaversion="5">
+<suite id="s1" name="Main Activity Test" source="/home/lotfi/Documents/MIE LOGWIRE/all_slides/robot-framework-projects/reobot_appium_calculator/main_activity_test.robot">
+<test id="s1-t1" name="Simple Addition" line="38">
+<kw name="Open Calculator App" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>appPackage=${ANDROID_APP_PACKAGE}</arg>
+<arg>appActivity=${ANDROID_APP_ACTIVITY}</arg>
+<arg>deviceName=${ANDROID_DEVICE_NAME}</arg>
+<arg>newCommandTimeout=600</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" start="2025-10-02T11:52:28.123376" elapsed="4.419019"/>
+</kw>
+<doc>Open Calculator App and perform a simple addition</doc>
+<status status="PASS" start="2025-10-02T11:52:28.122999" elapsed="4.419721"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-10-02T11:52:34.097611" level="INFO">criteria is android:id/button1</msg>
+<arg>id=android:id/button1</arg>
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-02T11:52:32.543216" elapsed="1.554609"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-10-02T11:52:34.101610" level="INFO">Clicking element 'id=android:id/button1'.</msg>
+<msg time="2025-10-02T11:52:34.303728" level="INFO">criteria is android:id/button1</msg>
+<arg>id=android:id/button1</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-02T11:52:34.098264" elapsed="0.205764"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-10-02T11:52:35.270872" level="INFO">criteria is com.miui.calculator:id/digit_5</msg>
+<arg>id=com.miui.calculator:id/digit_5</arg>
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-02T11:52:34.306597" elapsed="0.964390"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-10-02T11:52:35.272773" level="INFO">Clicking element 'id=com.miui.calculator:id/digit_5'.</msg>
+<msg time="2025-10-02T11:52:36.484496" level="INFO">criteria is com.miui.calculator:id/digit_5</msg>
+<arg>id=com.miui.calculator:id/digit_5</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-02T11:52:35.271229" elapsed="1.213383"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-10-02T11:52:36.487030" level="INFO">Clicking element 'id=com.miui.calculator:id/op_add'.</msg>
+<msg time="2025-10-02T11:52:37.606290" level="INFO">criteria is com.miui.calculator:id/op_add</msg>
+<arg>id=com.miui.calculator:id/op_add</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-02T11:52:36.484867" elapsed="1.121575"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-10-02T11:52:37.608683" level="INFO">Clicking element 'id=com.miui.calculator:id/digit_3'.</msg>
+<msg time="2025-10-02T11:52:38.707829" level="INFO">criteria is com.miui.calculator:id/digit_3</msg>
+<arg>id=com.miui.calculator:id/digit_3</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-02T11:52:37.606772" elapsed="1.101265"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-10-02T11:52:38.710958" level="INFO">Clicking element 'id=com.miui.calculator:id/btn_equal_s'.</msg>
+<msg time="2025-10-02T11:52:38.936814" level="INFO">criteria is com.miui.calculator:id/btn_equal_s</msg>
+<arg>id=com.miui.calculator:id/btn_equal_s</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-02T11:52:38.708483" elapsed="0.228449"/>
+</kw>
+<kw name="Get Text" owner="AppiumLibrary">
+<msg time="2025-10-02T11:52:40.005330" level="INFO">Element 'id=com.miui.calculator:id/result' text is '= 8' </msg>
+<msg time="2025-10-02T11:52:40.005522" level="INFO">criteria is com.miui.calculator:id/result</msg>
+<msg time="2025-10-02T11:52:40.005752" level="INFO">${result} = = 8</msg>
+<var>${result}</var>
+<arg>id=com.miui.calculator:id/result</arg>
+<doc>Returns the text of the element with the ``locator``.</doc>
+<status status="PASS" start="2025-10-02T11:52:38.937189" elapsed="1.068626"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2025-10-02T11:52:40.007198" level="INFO">@{words} = [ = | 8 ]</msg>
+<var>@{words}</var>
+<arg>${result}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2025-10-02T11:52:40.006697" elapsed="0.000565"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${words}[1]</arg>
+<arg>8</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-10-02T11:52:40.007600" elapsed="0.000679"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>"test1"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-02T11:52:40.008774" elapsed="0.000419"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and the webdriver session.</doc>
+<status status="PASS" start="2025-10-02T11:52:40.009760" elapsed="0.626324"/>
+</kw>
+<doc>Perform a simple addition operation in the calculator app</doc>
+<status status="PASS" start="2025-10-02T11:52:28.122545" elapsed="12.513705"/>
+</test>
+<doc>Simple example using AppiumLibrary</doc>
+<status status="PASS" start="2025-10-02T11:52:28.002343" elapsed="12.634487"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Main Activity Test" id="s1" pass="1" fail="0" skip="0">Main Activity Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
